@@ -1,0 +1,11 @@
+.bannerSection{
+    background:  url("https://parkofideas.com/renroll/demo3/wp-content/uploads/2020/02/renroll-0846366614.jpg") no-repeat fixed center;
+    background-size: cover;
+    height: 90vh;
+}
+.bannerContainer{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

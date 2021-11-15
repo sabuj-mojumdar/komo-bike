@@ -77,7 +77,7 @@ const useFirebase = () => {
     }, [auth])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://dry-shelf-32044.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -92,7 +92,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, photoURL, method) => {
         const user = { email, displayName, photoURL };
-        fetch('http://localhost:5000/users', {
+        fetch('https://dry-shelf-32044.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

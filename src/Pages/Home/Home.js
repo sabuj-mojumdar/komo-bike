@@ -4,14 +4,18 @@ import Navigation from "../../Components/Navigation/Navigation";
 import AllBikes from '../Services/AllBikes';
 import RentSection from './RentSection/RentSection';
 import Reviews from './Review/Reviews';
+import ContactUsSection from './ContactUsSection/ContactUsSection';
+import Banner from './Banner/Banner';
 
 const Home = () => {
     return (
         <div>
             <Navigation />
+            <Banner />
             <AllBikes />
-            <Reviews />
             <RentSection />
+            <Reviews />
+            <ContactUsSection />
             <Footer />
         </div>
     );

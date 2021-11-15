@@ -4,6 +4,7 @@ import { Grid } from '@mui/material';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from "./../../Hooks/useAuth";
 import Navigation from "../../Components/Navigation/Navigation";
+import bike from "../../images/bike.png";
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
@@ -31,9 +32,12 @@ const Login = () => {
         <>
             <Navigation />
             <Container>
-                <Grid container spacing={2}>
-                    <Grid item sx={{ mt: 8 }} xs={12}>
-                        <Typography variant="body1" gutterBottom>Login</Typography>
+                <Grid container spacing={2} height="100vh">
+                    <Grid item xs={12} md={6} sx={{ m: 'auto 0' }}>
+                        {isLoading ? <CircularProgress /> : <img src={bike} alt="login" />}
+                    </Grid>
+                    <Grid item sx={{ mt: 8 }} xs={12} md={6}>
+                        <Typography variant="h4" fontWeight="bold" gutterBottom>Login</Typography>
                         <form onSubmit={handleLoginSubmit}>
                             <TextField
                                 sx={{ width: '75%', m: 1 }}
@@ -51,18 +55,17 @@ const Login = () => {
                                 onChange={handleOnChange}
                                 variant="standard" />
 
-                            <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
+                            <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained" color="secondary">Login</Button>
                             <NavLink
                                 style={{ textDecoration: 'none' }}
                                 to="/register">
                                 <Button variant="text">New User? Please Register</Button>
                             </NavLink>
-                            {isLoading && <CircularProgress />}
                             {user?.email && <Alert severity="success">Login successfully!</Alert>}
                             {authError && <Alert severity="error">{authError}</Alert>}
                         </form>
                         <p>------------------------</p>
-                        <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
+                        <Button onClick={handleGoogleSignIn} variant="contained" color="error">Google Sign In</Button>
                     </Grid>
                 </Grid>
             </Container>

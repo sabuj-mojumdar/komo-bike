@@ -11,7 +11,7 @@ const useBooking = () => {
     const history = useHistory();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/bookings?email=${email}`)
+        fetch(`https://dry-shelf-32044.herokuapp.com/bookings?email=${email}`)
             .then(res => res.json())
             .then(data => setShopping(data))
     }, [email]);
@@ -20,7 +20,7 @@ const useBooking = () => {
     const handleDeleteBooking = id => {
         const proceed = window.confirm("Are You sure, you want to delete?");
         if (proceed) {
-            const url = `http://localhost:5000/bookings/${id}`;
+            const url = `https://dry-shelf-32044.herokuapp.com/bookings/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -40,7 +40,7 @@ const useBooking = () => {
     const handleDeleteAllBooking = email => {
         const proceed = window.confirm("Are You sure, you want to delete?");
         if (proceed) {
-            const url = `http://localhost:5000/bookings/?email=${email}`;
+            const url = `https://dry-shelf-32044.herokuapp.com/bookings/?email=${email}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -52,7 +52,7 @@ const useBooking = () => {
                         console.log(restBooking);
                         setShopping(restBooking);
                         setSuccess(true);
-                        history.push(`/dashboard/complete`);
+                        history.push(`/dashboard/review`);
                     }
                 });
 

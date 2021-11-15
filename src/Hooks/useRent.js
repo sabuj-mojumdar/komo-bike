@@ -4,7 +4,7 @@ const useRent = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/rentals')
+        fetch('https://dry-shelf-32044.herokuapp.com/rentals')
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);

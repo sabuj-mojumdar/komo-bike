@@ -6,7 +6,7 @@ const useBilling = () => {
     const [billings, setBillings] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/billing?email=${user.email}`)
+        fetch(`https://dry-shelf-32044.herokuapp.com/billing?email=${user.email}`)
             .then(res => res.json())
             .then(data => setBillings(data))
     }, [user.email]);

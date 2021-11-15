@@ -1,4 +1,4 @@
-import { Button, Grid, Typography, TextField, TextareaAutosize, Box } from '@mui/material';
+import { Button, Grid, Typography, TextField, TextareaAutosize, Box, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
@@ -17,7 +17,7 @@ const Complete = () => {
         setReviewInfo(newInfo);
     }
     const handleOnsubmit = e => {
-        fetch('http://localhost:5000/review', {
+        fetch('https://dry-shelf-32044.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -64,16 +64,30 @@ const Complete = () => {
                             size="small"
                             disabled
                         />
-                        <TextField
-                            sx={{ width: '90%', m: 1 }}
-                            name="review"
-                            type="number"
-                            onBlur={handleOnBlur}
-                            placeholder="Add Number 1 to 5"
-                            label="Add review"
-                            size="small"
-                            required
-                        />
+
+                        <FormControl variant="standard" sx={{ width: '90%', m: 1 }}>
+                            <InputLabel id="demo-simple-select-standard-label">Add review</InputLabel>
+                            <Select
+                                labelId="demo-simple-select-standard-label"
+                                name="review"
+                                onBlur={handleOnBlur}
+                                label="Add review"
+                                variant="outlined"
+                                required
+                            >
+                                <MenuItem value={1}>1</MenuItem>
+                                <MenuItem value={1.5}>1.5</MenuItem>
+                                <MenuItem value={2}>2</MenuItem>
+                                <MenuItem value={2.5}>2.5</MenuItem>
+                                <MenuItem value={3}>3</MenuItem>
+                                <MenuItem value={3.5}>3.5</MenuItem>
+                                <MenuItem value={4}>4.5</MenuItem>
+                                <MenuItem value={5}>5</MenuItem>
+                            </Select>
+                        </FormControl>
+
+
+
                         <TextareaAutosize
                             style={{ width: '90%', fontSize: '16px' }}
                             aria-label="minimum height"

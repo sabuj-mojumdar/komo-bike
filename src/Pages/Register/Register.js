@@ -4,6 +4,7 @@ import { Grid } from '@mui/material';
 import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from "./../../Hooks/useAuth";
 import Navigation from "../../Components/Navigation/Navigation";
+import bike2 from "../../images/bike2.png";
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
@@ -30,9 +31,9 @@ const Register = () => {
             <Navigation />
             <Container>
                 <Grid container spacing={2}>
-                    <Grid item sx={{ mt: 8 }} xs={12}>
-                        <Typography variant="body1" gutterBottom>Register</Typography>
-                        {!isLoading && <form onSubmit={handleLoginSubmit}>
+
+                    <Grid item sx={{ mt: 8 }} xs={12} md={6}>
+                        <Typography variant="h4" fontWeight="bold" gutterBottom>Register</Typography>                        {!isLoading && <form onSubmit={handleLoginSubmit}>
                             <TextField
                                 sx={{ width: '75%', m: 1 }}
                                 id="standard-basic"
@@ -76,12 +77,15 @@ const Register = () => {
                             <NavLink
                                 style={{ textDecoration: 'none' }}
                                 to="/login">
-                                <Button variant="text">Already Registered? Please Login</Button>
+                                <Button variant="text" color="secondary">Already Registered? Please Login</Button>
                             </NavLink>
                         </form>}
                         {isLoading && <CircularProgress />}
                         {user?.email && <Alert severity="success">User Created successfully!</Alert>}
                         {authError && <Alert severity="error">{authError}</Alert>}
+                    </Grid>
+                    <Grid item xs={12} md={6} sx={{ m: 'auto 0' }}>
+                        <img src={bike2} alt="register" />
                     </Grid>
                 </Grid>
             </Container>

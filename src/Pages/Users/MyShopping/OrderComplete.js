@@ -19,7 +19,7 @@ const OrderComplete = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${orId}`)
+        fetch(`https://dry-shelf-32044.herokuapp.com/orders/${orId}`)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [orId]);

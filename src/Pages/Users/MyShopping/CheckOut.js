@@ -48,7 +48,7 @@ const CheckOut = () => {
             date: newDate,
             count: count
         };
-        fetch('http://localhost:5000/orders', {
+        fetch('https://dry-shelf-32044.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

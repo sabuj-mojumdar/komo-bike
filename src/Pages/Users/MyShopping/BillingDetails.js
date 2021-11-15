@@ -36,7 +36,7 @@ const BillingDetails = ({ openBooking, handleBookingClose, setSuccess }) => {
     }
 
     const handleSubmit = e => {
-        fetch('http://localhost:5000/billing', {
+        fetch('https://dry-shelf-32044.herokuapp.com/billing', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

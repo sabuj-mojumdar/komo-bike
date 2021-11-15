@@ -45,7 +45,7 @@ const BookingModal = ({ openBooking, handleBookingClose, setBookingSuccess, serv
             img: imgUrl
         }
         // send to the server
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://dry-shelf-32044.herokuapp.com/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

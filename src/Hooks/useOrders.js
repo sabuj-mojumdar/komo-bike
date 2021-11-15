@@ -8,7 +8,7 @@ const useOrders = () => {
     const [allOrders, setAllOrders] = useState([]);
     const [success, setSuccess] = useState(false);
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/?email=${email}`)
+        fetch(`https://dry-shelf-32044.herokuapp.com/orders/?email=${email}`)
             .then(res => res.json())
             .then(data => setAllOrders(data));
     }, [email]);
@@ -18,7 +18,7 @@ const useOrders = () => {
     const handleDeletebook = id => {
         const proceed = window.confirm("Are You sure, you want to delete?");
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://dry-shelf-32044.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -38,7 +38,7 @@ const useOrders = () => {
 
     return (
         {
-            allOrders, success, handleDeletebook
+            allOrders, success, handleDeletebook,
 
         }
     );

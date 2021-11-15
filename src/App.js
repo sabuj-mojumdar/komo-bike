@@ -11,6 +11,7 @@ import Dashboard from "../src/Pages/Users/Dashboard/Dashboard";
 import NotFoundPage from "../src/Pages/NotFoundPage/NotFoundPage";
 import AuthProvider from './Contexts/AuthProvider';
 import ExploreAllBike from './Pages/ExploreAllBike/ExploreAllBike';
+import PrivateRoute from "../src/Pages/Login/PrivateRoute/PrivateRoute";
 
 
 function App() {
@@ -34,9 +35,9 @@ function App() {
             <Route path="/register">
               <Register />
             </Route>
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard />
-            </Route>
+            </PrivateRoute>
             <Route path="*">
               <NotFoundPage />
             </Route>

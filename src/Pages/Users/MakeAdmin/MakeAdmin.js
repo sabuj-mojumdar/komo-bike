@@ -1,4 +1,4 @@
-import { Button, TextField, Alert } from '@mui/material';
+import { Button, TextField, Alert, Container, Grid, Box } from '@mui/material';
 import React, { useState } from 'react';
 
 const MakeAdmin = () => {
@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://dry-shelf-32044.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -28,19 +28,32 @@ const MakeAdmin = () => {
         e.preventDefault()
     }
     return (
-        <div>
-            <h2>Make an Admin</h2>
-            <form onSubmit={handleAdminSubmit}>
-                <TextField
-                    sx={{ width: '50%' }}
-                    label="Email"
-                    type="email"
-                    onBlur={handleOnBlur}
-                    variant="standard" />
-                <Button type="submit" variant="contained">Make Admin</Button>
-            </form>
-            {success && <Alert severity="success">Made Admin successfully!</Alert>}
-        </div>
+        <section>
+            <Container>
+                <h1>Make an Admin</h1>
+                <Grid container sx={{ textAlign: 'center' }}>
+                    <Grid item xs={12} md={6}>
+                        <Box sx={{ width: 1 }}>
+                            <img src="https://t3.ftcdn.net/jpg/03/62/56/24/360_F_362562495_Gau0POzcwR8JCfQuikVUTqzMFTo78vkF.jpg" alt="admin_image" />
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12} md={6} sx={{ margin: 'auto' }}>
+                        <form onSubmit={handleAdminSubmit}>
+                            <TextField
+                                sx={{ width: '100%' }}
+                                label="Email"
+                                type="email"
+                                onBlur={handleOnBlur}
+                                variant="outlined" />
+                            <Box sx={{ width: 1 }}>
+                                <Button sx={{ width: 1, my: 2 }} type="submit" variant="contained">Make Admin</Button>
+                            </Box>
+                        </form>
+                        {success && <Alert severity="success">Made Admin successfully!</Alert>}
+                    </Grid>
+                </Grid>
+            </Container>
+        </section>
     );
 };
 

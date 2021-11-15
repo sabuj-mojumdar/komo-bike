@@ -32,6 +32,7 @@ import Complete from '../MyShopping/Complete';
 import OrderComplete from '../MyShopping/OrderComplete';
 import MyShopping from '../MyShopping/MyShopping';
 import AllOrders from '../ManageAllOrders/AllOrders';
+import PayNow from '../PayNow/PayNow';
 
 const drawerWidth = 280;
 
@@ -63,6 +64,19 @@ function Dashboard(props) {
                 <Link to={`${url}/myshopping`} style={{ textDecoration: 'none', color: 'rgba(0, 0, 0, 0.6)' }}>
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', p: 1, mb: 1, boxShadow: 1 }}>
                         <Typography variant="h6" sx={{ color: 'rgba(0, 0, 0, 0.6)' }}>My Shopping</Typography>
+                        <ShoppingCartIcon />
+                    </Box>
+                </Link>
+                <Link to={`${url}/paynow`} style={{ textDecoration: 'none', color: 'rgba(0, 0, 0, 0.6)' }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', p: 1, mb: 1, boxShadow: 1 }}>
+                        <Typography variant="h6" sx={{ color: 'rgba(0, 0, 0, 0.6)' }}>Pay Now</Typography>
+                        <ShoppingCartIcon />
+                    </Box>
+                </Link>
+
+                <Link to={`${url}/review`} style={{ textDecoration: 'none', color: 'rgba(0, 0, 0, 0.6)' }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', p: 1, mb: 1, boxShadow: 1 }}>
+                        <Typography variant="h6" sx={{ color: 'rgba(0, 0, 0, 0.6)' }}>My Review</Typography>
                         <ShoppingCartIcon />
                     </Box>
                 </Link>
@@ -182,8 +196,11 @@ function Dashboard(props) {
                     <Route exact path={`${path}/checkout`}>
                         <CheckOut />
                     </Route>
-                    <Route exact path={`${path}/complete`}>
+                    <Route exact path={`${path}/review`}>
                         <Complete />
+                    </Route>
+                    <Route exact path={`${path}/paynow`}>
+                        <PayNow />
                     </Route>
                     <Route exact path={`${path}/order-complete/:orId`}>
                         <OrderComplete />

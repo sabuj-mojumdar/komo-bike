@@ -20,7 +20,7 @@ const CreateService = () => {
     }
     const handleCreateService = e => {
 
-        fetch('http://localhost:5000/rentals', {
+        fetch('https://dry-shelf-32044.herokuapp.com/rentals', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
