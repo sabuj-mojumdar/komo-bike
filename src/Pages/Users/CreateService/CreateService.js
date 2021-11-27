@@ -11,6 +11,7 @@ const CreateService = () => {
     const userInfo = { userName: user.displayName, email: user.email };
 
     const [newService, setNewService] = useState(userInfo);
+
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;

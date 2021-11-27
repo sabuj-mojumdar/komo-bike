@@ -12,9 +12,15 @@ import NotFoundPage from "../src/Pages/NotFoundPage/NotFoundPage";
 import AuthProvider from './Contexts/AuthProvider';
 import ExploreAllBike from './Pages/ExploreAllBike/ExploreAllBike';
 import PrivateRoute from "../src/Pages/Login/PrivateRoute/PrivateRoute";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <div className="App">
       <AuthProvider>

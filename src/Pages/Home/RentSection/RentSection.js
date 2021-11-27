@@ -6,7 +6,7 @@ const RentSection = () => {
         <Container sx={{ my: 5 }}>
             <h2>Why to Rent Our Bike?</h2>
             <Grid container spacing={3}>
-                <Grid item xs={12} sm={6} md={4}>
+                <Grid data-aos="zoom-in" item xs={12} sm={6} md={4}>
                     <Card sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%' }}>
                         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                             <CardContent sx={{ flex: '1 0 auto', textAlign: 'left' }}>
@@ -25,7 +25,7 @@ const RentSection = () => {
                     </Card>
                 </Grid>
 
-                <Grid item xs={12} sm={6} md={4}>
+                <Grid data-aos="zoom-in" item xs={12} sm={6} md={4}>
                     <Card sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%' }}>
                         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                             <CardContent sx={{ flex: '1 0 auto', textAlign: 'left' }}>
@@ -41,8 +41,8 @@ const RentSection = () => {
                             <i className="fas fa-user-shield"></i>                        </Box>
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <Card sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%' }}>
+                <Grid data-aos="zoom-in" item xs={12} sm={6} md={4}>
+                    <Card data-aos="zoom-in" sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%' }}>
                         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                             <CardContent sx={{ flex: '1 0 auto', textAlign: 'left' }}>
                                 <Typography component="div" variant="h5">

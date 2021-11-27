@@ -85,9 +85,6 @@ const Complete = () => {
                                 <MenuItem value={5}>5</MenuItem>
                             </Select>
                         </FormControl>
-
-
-
                         <TextareaAutosize
                             style={{ width: '90%', fontSize: '16px' }}
                             aria-label="minimum height"

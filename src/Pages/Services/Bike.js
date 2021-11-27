@@ -33,7 +33,7 @@ const Bike = ({ service }) => {
 
     return (
         <>
-            <Grid item xs={2} sm={4} md={4}>
+            <Grid data-aos="fade-right" item xs={12} sm={6} md={4}>
                 <Item>
                     <Card sx={{ width: 1, border: 0, boxShadow: 0 }}>
                         <CardHeader

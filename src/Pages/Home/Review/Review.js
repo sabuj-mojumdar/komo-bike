@@ -6,7 +6,7 @@ const Review = ({ rw }) => {
     const { name, imgUrl, review, comments } = rw;
     const comment = comments.slice(0, 100);
     return (
-        <Grid item xs={12} sm={6} md={4} lg={3}>
+        <Grid data-aos="fade-up" item xs={12} sm={6} md={4} lg={3}>
             <Card sx={{ maxWidth: 345, maxHeight: 310, height: 1 }}>
                 <img src={imgUrl} alt={name} width="100px" height="100px" />
                 <CardContent>
