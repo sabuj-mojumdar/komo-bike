@@ -14,21 +14,21 @@ const styles = {
 }
 
 const AllBikes = () => {
-    const { services } = useRent();
+    const { services, isLoading } = useRent();
     const sliceServices = services.slice(0, 6);
     return (
         <Container sx={{ my: 5 }}>
             <StyleRoot>
                 <h1 style={styles.fadeInUp} >Explore and Find your best Bike</h1>
             </StyleRoot>
-            <Grid container sx={{ textAlign: 'center' }} spacing={3}>
+            {isLoading ? <h1>Loading....</h1> : <Grid container sx={{ textAlign: 'center' }} spacing={3}>
                 {
                     sliceServices.map(service =>
                         <Bike key={service._id}
                             service={service}
                         />)
                 }
-            </Grid>
+            </Grid>}
         </Container>
     );
 };

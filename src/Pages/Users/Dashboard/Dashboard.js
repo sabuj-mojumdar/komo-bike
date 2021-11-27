@@ -93,38 +93,6 @@ function Dashboard(props) {
                     </Box>
                 </Link>
 
-                <Link to={`${url}/reducer`} style={{ textDecoration: 'none', color: 'rgba(0, 0, 0, 0.6)' }}>
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', p: 1, mb: 1, boxShadow: 1 }}>
-                        <Typography variant="h6" sx={{ color: 'rgba(0, 0, 0, 0.6)' }}>Reducer</Typography>
-                        <AssignmentIndIcon />
-                    </Box>
-                </Link>
-                <Link to={`${url}/counter3`} style={{ textDecoration: 'none', color: 'rgba(0, 0, 0, 0.6)' }}>
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', p: 1, mb: 1, boxShadow: 1 }}>
-                        <Typography variant="h6" sx={{ color: 'rgba(0, 0, 0, 0.6)' }}>counter3</Typography>
-                        <AssignmentIndIcon />
-                    </Box>
-                </Link>
-                <Link to={`${url}/datafetch`} style={{ textDecoration: 'none', color: 'rgba(0, 0, 0, 0.6)' }}>
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', p: 1, mb: 1, boxShadow: 1 }}>
-                        <Typography variant="h6" sx={{ color: 'rgba(0, 0, 0, 0.6)' }}>DataFetch</Typography>
-                        <AssignmentIndIcon />
-                    </Box>
-                </Link>
-                <Link to={`${url}/styledcomponent`} style={{ textDecoration: 'none', color: 'rgba(0, 0, 0, 0.6)' }}>
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', p: 1, mb: 1, boxShadow: 1 }}>
-                        <Typography variant="h6" sx={{ color: 'rgba(0, 0, 0, 0.6)' }}>Styled Component</Typography>
-                        <AssignmentIndIcon />
-                    </Box>
-                </Link>
-
-                <Link to={`${url}/counter`} style={{ textDecoration: 'none', color: 'rgba(0, 0, 0, 0.6)' }}>
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', p: 1, mb: 1, boxShadow: 1 }}>
-                        <Typography variant="h6" sx={{ color: 'rgba(0, 0, 0, 0.6)' }}>Complex Counter</Typography>
-                        <AssignmentIndIcon />
-                    </Box>
-                </Link>
-
                 {admin && <Box>
                     <Link to={`${url}/allorders`} style={{ textDecoration: 'none', color: 'rgba(0, 0, 0, 0.6)' }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', p: 1, mb: 1, boxShadow: 1 }}>
@@ -239,21 +207,6 @@ function Dashboard(props) {
                     </Route>
                     <Route exact path={`${path}/paynow`}>
                         <PayNow />
-                    </Route>
-                    <Route exact path={`${path}/reducer`}>
-                        <ReducerPractice />
-                    </Route>
-                    <Route exact path={`${path}/counter3`}>
-                        <Counter3 />
-                    </Route>
-                    <Route exact path={`${path}/counter`}>
-                        <ComplexCounter />
-                    </Route>
-                    <Route exact path={`${path}/datafetch`}>
-                        <DataFetch />
-                    </Route>
-                    <Route exact path={`${path}/styledcomponent`}>
-                        <StyledComponent />
                     </Route>
                     <Route exact path={`${path}/order-complete/:orId`}>
                         <OrderComplete />
