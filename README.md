@@ -7,4 +7,4 @@
 - Admin can manage services like add new services, delete services. 
 - Users can give review from dashboard if he satisfied from our services. 
 
-![name-of-you-image](https://your-copied-image-address)
+![name-of-you-image](https://raw.githubusercontent.com/sabuj-mojumdar/komo-bike/main/src/images/Screenshot_16.png)
